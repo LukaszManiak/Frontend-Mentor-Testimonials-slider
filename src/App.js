@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+//workers list
 const workersList = [
   {
     name: "Tanya Sinclair",
@@ -25,9 +26,12 @@ function App() {
   );
 }
 
+//worker component
 function Worker() {
   const [slide, setSlide] = useState(0);
   console.log(slide, workersList.length);
+
+  //handle slider buttons
   function handlePrev() {
     if (slide > 0) setSlide((s) => s - 1);
   }
@@ -37,6 +41,7 @@ function Worker() {
       : setSlide(workersList.length - 1);
   }
 
+  //worker
   return (
     <div className="worker-container">
       <div className="quote-text-container">
