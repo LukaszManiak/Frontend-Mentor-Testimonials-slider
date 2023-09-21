@@ -1,4 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+
+html,
+* {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --darkBlue: hsl(240, 38%, 20%);
+  --grayishBlue: hsl(240, 18%, 77%);
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: column;
+  justify-items: center;
+  align-items: center;
+}
+
 .main-container {
+  position: absolute;
+}
+
+.quote-text-container {
+  width: 40%;
 }
 
 .worker-container {
@@ -9,14 +33,54 @@
   align-items: center;
 }
 
+.image-container {
+  position: relative;
+}
 .worker-image {
-  width: 100%;
+  width: 60%;
 }
 
+.buttons-container {
+  position: absolute;
+  z-index: 11;
+  bottom: -10px;
+  left: 50px;
+}
+.next-btn,
+.prev-btn {
+  cursor: pointer;
+  width: 40px;
+  padding: 5px 10px;
+  background-color: white;
+  border: none;
+}
+.prev-btn {
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
+
+.next-btn {
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
 @media (max-width: 976px) {
   .worker-container {
     width: 60%;
 
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .worker-image {
+    width: 100%;
+  }
+  .quote-text-container {
+    width: 80%;
+    text-align: center;
+  }
+
+  .buttons-container {
+    left: 50%;
   }
 }

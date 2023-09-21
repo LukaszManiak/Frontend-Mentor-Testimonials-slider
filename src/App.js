@@ -53,12 +53,14 @@ function Worker() {
       </div>
       <div className="image-container">
         <img className="worker-image" src={workersList[+slide].imgSrc} alt="" />
-        <button onClick={() => handlePrev()} className="prev-btn">
-          <img src="" alt="" />
-        </button>
-        <button onClick={() => handleNext()} className="next-btn">
-          <img src="" alt="" />
-        </button>
+        <div className="buttons-container">
+          <button onClick={() => handlePrev()} className="prev-btn">
+            <img src="" alt="" />
+          </button>
+          <button onClick={() => handleNext()} className="next-btn">
+            <img src="" alt="" />
+          </button>
+        </div>
       </div>
     </div>
   );
