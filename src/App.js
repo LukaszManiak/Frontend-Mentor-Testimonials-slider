@@ -20,9 +20,9 @@ const workersList = [
 
 function App() {
   return (
-    <div className="main-container">
+    <>
       <Worker />
-    </div>
+    </>
   );
 }
 
@@ -43,26 +43,33 @@ function Worker() {
 
   //worker
   return (
-    <div className="worker-container">
-      <div className="quote-text-container">
-        <p>{workersList[+slide].quote}</p>
-        <p>
-          <b>{workersList[+slide].name}</b>{" "}
-          <span>{workersList[+slide].role}</span>
-        </p>
-      </div>
-      <div className="image-container">
-        <img className="worker-image" src={workersList[+slide].imgSrc} alt="" />
-        <div className="buttons-container">
-          <button onClick={() => handlePrev()} className="prev-btn">
-            <img src="" alt="" />
-          </button>
-          <button onClick={() => handleNext()} className="next-btn">
-            <img src="" alt="" />
-          </button>
+    <>
+      <div className="worker-container">
+        <div className="quote-text-container">
+          <p>{workersList[+slide].quote}</p>
+          <p>
+            <b>{workersList[+slide].name}</b>{" "}
+            <span>{workersList[+slide].role}</span>
+          </p>
+        </div>
+        <div className="image-container">
+          <img
+            className="worker-image"
+            src={workersList[+slide].imgSrc}
+            alt=""
+          />
+          <div className="buttons-container">
+            <button onClick={() => handlePrev()} className="prev-btn">
+              <img src="" alt="" />
+            </button>
+            <button onClick={() => handleNext()} className="next-btn">
+              <img src="" alt="" />
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      <img src="./images/" alt="" />
+    </>
   );
 }
 
