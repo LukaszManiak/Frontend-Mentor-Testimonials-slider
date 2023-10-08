@@ -2,6 +2,8 @@
 
 html,
 * {
+  margin: 0;
+  overflow: hidden;
   font-family: "Inter", sans-serif;
 }
 
@@ -37,6 +39,7 @@ body {
   position: relative;
 }
 .worker-image {
+  z-index: 10;
   border-radius: 15px;
 }
 
@@ -63,6 +66,19 @@ body {
   border-top-right-radius: 35px;
   border-bottom-right-radius: 35px;
 }
+
+.svg-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.svg-curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 @media (max-width: 976px) {
   .worker-container {
     width: 60%;
@@ -76,6 +92,7 @@ body {
     width: 100%;
   }
   .quote-text-container {
+    margin-top: 2rem;
     width: 80%;
     text-align: center;
   }
