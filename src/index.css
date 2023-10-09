@@ -3,7 +3,7 @@
 html,
 * {
   margin: 0;
-  overflow: hidden;
+
   font-family: "Inter", sans-serif;
 }
 
@@ -40,6 +40,7 @@ body {
 }
 .worker-image {
   z-index: 10;
+
   border-radius: 15px;
 }
 
@@ -48,12 +49,16 @@ body {
   z-index: 11;
   bottom: -10px;
   left: 50px;
+  background-color: white;
+  border-radius: 35px;
+  box-shadow: 0px 11px 31px -10px rgba(31, 31, 71, 1);
 }
-.next-btn,
-.prev-btn {
+
+.prev-btn,
+.next-btn {
   cursor: pointer;
   width: 40px;
-  padding: 5px 10px;
+  padding: 15px 30px;
   background-color: white;
   border: none;
 }
@@ -63,15 +68,30 @@ body {
 }
 
 .next-btn {
+  margin-right: 10px;
   border-top-right-radius: 35px;
   border-bottom-right-radius: 35px;
 }
-
+.quote-text {
+  margin-top: -40px;
+}
+.quote {
+  font-size: 1.7rem;
+}
+.person {
+  margin-top: 35px;
+  font-size: 1.3rem;
+}
+.quote-svg {
+  margin-left: 5vw;
+}
 .svg-bg {
+  object-fit: fill;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
+  top: 50%;
+  right: 3vw;
+  transform: translate(-3vw, -50%);
+  z-index: -5;
 }
 
 .svg-curve {
@@ -80,16 +100,25 @@ body {
   left: 0;
 }
 @media (max-width: 976px) {
+  html {
+    overflow-x: hidden;
+  }
   .worker-container {
-    width: 60%;
-
+    width: 80%;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }
-
+  .svg-bg {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+  }
   .worker-image {
-    width: 100%;
+    width: 80%;
   }
   .quote-text-container {
     margin-top: 2rem;
@@ -98,7 +127,20 @@ body {
   }
 
   .buttons-container {
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 35%;
+    transform: translate(-35%, 0);
+  }
+  .quote-text {
+    margin-top: -80px;
+  }
+  .quote {
+    font-size: 1.4rem;
+  }
+  .person {
+    margin-top: 35px;
+    font-size: 1.2rem;
+  }
+  .quote-svg {
+    margin-left: 5vw;
   }
 }
